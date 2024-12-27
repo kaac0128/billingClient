@@ -1,0 +1,22 @@
+
+<label class="inline-flex items-center mb-5 cursor-pointer">
+  <input type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" value="Crear Nueva Factura" />
+</label>
+<div>
+  <div>
+    <form class="max-w-sm mx-auto" style="display: inline-block;">
+      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cliente</label>
+      <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        @for(client of clients; track client){
+          <option >{{ client.razonSocial }}</option>
+        }
+      </select>
+    </form>
+    <form class="max-w-sm mx-auto" style="display: inline-block;
+    margin-left: 1em;">
+      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Numero Factura</label>
+      <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+    </form>
+  </div>
+  <button type="button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Agregar Producto</button>
+</div>
